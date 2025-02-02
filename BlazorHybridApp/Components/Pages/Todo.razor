@@ -1,5 +1,8 @@
 ﻿@page "/todo"
 @using BlazorHybridApp.Data
+@using Microsoft.Maui.Storage
+@using System.IO
+@using System.Text.Json
 
 <h3>To-do List (@todos.Count(todo => !todo.IsDone))</h3>
 
@@ -35,9 +38,38 @@
     }
     private async Task Save()
     {
+        // Serialize data into a JSON string
+        var contents = JsonSerializer.Serialize(todos);
+
+        // Create the path for the file
+        var path = Path.Combine(FileSystem.AppDataDirectory, "todo.json");
+
+        // Write the JSON file contents to the file
+        File.WriteAllText(path, contents);
+
+        // Note that we can also access platform pop-ups. Here, we're displaying an alert when the file is saved.
+        await App.Current.MainPage.DisplayAlert("List Saved", $"List has been saved to {path}", "OK");
     }
 
     private void Load()
     {
+        // Create the path for the file that's being retrieved
+        var path = Path.Combine(FileSystem.AppDataDirectory, "todo.json");
+
+        if (!File.Exists(path))
+            return;
+
+        // Read the JSON file contents
+        var contents = File.ReadAllText(path);
+
+        // Deserialize the JSON string into a list of TodoItem objects
+        var savedItems = JsonSerializer.Deserialize<List<TodoItem>>(contents);
+
+        // Clear the current list of to-do items
+        todos.Clear();
+
+        // Load the saved items to the current list
+        todos.AddRange(savedItems);
+
     }
 }
