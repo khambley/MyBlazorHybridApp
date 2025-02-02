@@ -1,2 +1,10 @@
-# BlazorHybridApp
-[Access platform features in Blazor Hybrid](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/9-exercise-platform-features)
+#  Build a mobile and desktop app with Blazor Hybrid and .NET MAUI
+[1. Introduction](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/1-introduction)  
+[2. What is Blazor Hybrid?](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/2-understand-blazor-hybrid)  
+[3. Exercise - Create and run a Blazor Hybrid app](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/3-exercise-configure-environment?pivots=vstudio)  
+[4. Razor components in Blazor Hybrid](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/4-blazor-components)
+[5. Exercise - Add a component](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/5-exercise-add-component?pivots=vstudio)
+[6. Data binding and events in Blazor Hybrid](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/6-csharp-razor-binding)
+[7. Exercise - Data binding and events](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/7-exercise-razor-binding?pivots=vstudio)
+[8. Access platform features in Blazor Hybrid](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/8-platform-features)
+[9. Exercise - Access platform features in Blazor Hybrid](https://learn.microsoft.com/en-us/training/modules/build-blazor-hybrid/9-exercise-platform-features)
